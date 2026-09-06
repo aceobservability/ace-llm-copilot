@@ -169,7 +169,7 @@ func TestListModels_FiltersToChatEnabled(t *testing.T) {
 		t.Errorf("expected second model ID 'claude-sonnet-4', got '%s'", models[1].ID)
 	}
 	if models[1].Vendor != "anthropic" {
-			t.Errorf("expected second model Vendor 'anthropic', got '%s'", models[1].Vendor)
+		t.Errorf("expected second model Vendor 'anthropic', got '%s'", models[1].Vendor)
 	}
 	if calls := atomic.LoadInt32(&tokenCalls); calls != 1 {
 		t.Errorf("expected 1 token endpoint call, got %d", calls)
